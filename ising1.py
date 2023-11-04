@@ -121,14 +121,14 @@ class Ising():
                 plt.xlabel('Algorithm Run Time')
                 plt.ylabel('Energy')
                 plt.title(r'Net Energy')
-                # plt.savefig("/Users/mohan/Desktop/net_e.jpg", dpi = 800)
+                # plt.savefig("path_to_image/net_e.jpg", dpi = 800)
                 plt.show()
             if i == self.loops - 1:
                 plt.plot(time, net_spin)
                 plt.xlabel('Algorithm Run Time')
                 plt.ylabel('Net Spin')
                 plt.title(r'Net Spin')
-                # plt.savefig("/Users/mohan/Desktop/net_s.jpg", dpi = 800)
+                # plt.savefig("path_to_image/net_s.jpg", dpi = 800)
                 plt.show()
             
 
