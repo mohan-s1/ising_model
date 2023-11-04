@@ -1,4 +1,4 @@
-*Part 1* 
+# Part 1
 (1) Set up a 2D lattice in the program, i.e., an indexed 2D matrix where each
 matrix site is indexed by i and j, where both variables run from 0 to 19 (or 1
 to 20, depending on the convention in your program of choice), and each
