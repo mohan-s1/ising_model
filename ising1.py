@@ -1,15 +1,16 @@
 import numpy as np
+import random
 import matplotlib.pyplot as plt
 from scipy.ndimage import generate_binary_structure
 from scipy.signal import convolve2d
 
 J = 1 # initialize coupling const
 
-H = 1  # initialize external field
+H = -3 # initialize external field
 
 N = 20 # initialize number of sites
 
-iter = 1001 # initialize number of iterations
+iter = 10001 # initialize number of iterations
 
 class Ising():
     def __init__(self, N: int, H: float, J: float, loops:int):
@@ -41,7 +42,8 @@ class Ising():
         #where central points  and next nearest neighbors have values of true
         kernel[1][1] = False # set central point in kernel to false to avoid si*si 
         # being part of the sum 
-        E2 = -1/2 * self.lattice * self.J * convolve2d(self.lattice, kernel, mode = 'same', boundary = 'wrap') # 1/2 here 
+        E2 = -1/2 * self.lattice * self.J * convolve2d(self.lattice, kernel, mode = 'same'
+                                                       , boundary = 'wrap') # 1/2 here 
         # to get rid of double counting
         E1 = []
         for i in range(len(self.lattice)):
@@ -132,4 +134,4 @@ class Ising():
 
 model = Ising(N, H, J, iter) # Parameters to our object, Ising
 
-model.simulate()
+model.simulate() # run the function, simulate
