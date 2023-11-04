@@ -29,7 +29,7 @@ a computationally efficient way to do this transformation?)
   
   d. Recalculate its interaction with its nearest neighbors and the field.
   
-  e. Use what you calculated in part (b) and (d) to calculate EIsing for this
+  e. Use what you calculated in part (b) and (d) to calculate $\Delta$EIsing for this
 “spin flip.” [NOTE – there is no need to calculate the TOTAL energy
 again here, just calculating what has changed due to the flip of the
 single, randomly-chosen spin, is enough and far more computationally
@@ -41,7 +41,7 @@ maybe check your constantly-updated energy against the full energy
 calculation every 1,000 times through.)
   
   f. If the spin flip reduced the energy, accept the change and update the
-energy for the entire system (by adding the EIsing to the total energy
+energy for the entire system (by adding the $\Delta$EIsing to the total energy
 you had before the flip). If it increased the energy, reject the change,
 flip the spin back, and keep the total energy you had before flipping
 the spin.
